@@ -90,13 +90,12 @@ function createSetHeader (options) {
       val = res.getHeader(header) + ', '
     }
 
+    val += options.prefix ?? ''
     val += time.toFixed(digits)
     
     if (suffix) {
       val += 'ms'
     }
-
-    val.concat(options.prefix, val)
 
     res.setHeader(header, val)
   }
