@@ -84,11 +84,13 @@ function createSetHeader (options) {
     : true
 
   return function setResponseHeader (req, res, time) {
+    var val
+
     if (res.getHeader(header)) {
-      return
+      val = res.getHeader(header) + ', '
     }
 
-    var val = time.toFixed(digits)
+    val += time.toFixed(digits)
     
     if (suffix) {
       val += 'ms'
