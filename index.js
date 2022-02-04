@@ -84,7 +84,7 @@ function createSetHeader (options) {
     : true
 
   return function setResponseHeader (req, res, time) {
-    var val
+    var val = ''
 
     if (res.getHeader(header)) {
       val = res.getHeader(header) + ', '
