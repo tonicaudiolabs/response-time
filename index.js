@@ -94,7 +94,7 @@ function createSetHeader (options) {
       val += 'ms'
     }
 
-    String.concat(prefix, val)
+    String.concat(options.prefix, val)
 
     res.setHeader(header, val)
   }
