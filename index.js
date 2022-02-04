@@ -31,6 +31,7 @@ module.exports = responseTime
  * @param {number} [options.digits=3]
  * @param {string} [options.header=X-Response-Time]
  * @param {boolean} [options.suffix=true]
+ * @param {string} [options.prefix='']
  * @return {function}
  * @public
  */
@@ -88,10 +89,12 @@ function createSetHeader (options) {
     }
 
     var val = time.toFixed(digits)
-
+    
     if (suffix) {
       val += 'ms'
     }
+
+    String.concat(prefix, val)
 
     res.setHeader(header, val)
   }
