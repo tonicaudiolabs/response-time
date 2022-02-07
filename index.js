@@ -92,7 +92,7 @@ function createSetHeader (options) {
 
     val += options.prefix ?? ''
     val += time.toFixed(digits)
-    
+
     if (suffix) {
       val += 'ms'
     }
