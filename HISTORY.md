@@ -1,6 +1,8 @@
-unreleased
+2.3.3 / 2024-10-07
 ==========
 
+  * deps: depd@~2.0.0
+    - Remove remove use of `eval`
   * deps: depd@~1.1.2
     - Remove unnecessary `Buffer` loading
     - perf: remove argument reassignment
